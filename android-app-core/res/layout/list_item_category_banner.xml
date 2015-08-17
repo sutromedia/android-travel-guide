@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+   xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="fill_parent"
+   android:layout_height="fill_parent"
+   android:orientation="horizontal"
+   style="@style/MainList"
+   android:padding="0dip">
+
+    <ImageView
+    	android:id="@+entry/logo"
+    	android:layout_width="0dip"
+    	android:layout_height="wrap_content"
+    	android:src="@drawable/app_icon"
+    	android:layout_alignParentLeft="true"
+    	android:layout_centerInParent="true"
+        android:layout_weight="1"
+        android:scaleType="centerCrop">
+    </ImageView>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:paddingLeft="10dip"
+        android:layout_weight="1"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content">
+
+      <TextView
+    	 android:id="@+entry/title"
+         style="@style/MainListEntryName"
+    	 android:text=""
+	 android:textColor="@android:color/black"
+	 android:textStyle="bold"
+	 android:textSize="25dip"
+    	 android:layout_height="wrap_content"
+    	 android:layout_width="wrap_content" />
+
+      <TextView
+    	 android:id="@+entry/count_entries"
+    	 android:text="Number of entries:"
+	 android:textSize="15dip"
+	 android:textStyle="italic"
+    	 android:layout_height="wrap_content"
+    	 android:layout_width="wrap_content" />
+
+      <TextView
+    	 android:id="@+entry/count_photos"
+    	 android:text="Number of photos:"
+	 android:textSize="15dip"
+	 android:textStyle="italic"
+    	 android:layout_height="wrap_content"
+    	 android:layout_width="wrap_content" />
+
+
+    </LinearLayout>
+</LinearLayout>

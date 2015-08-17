@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+menu/browse"
+          android:icon="@drawable/menu_icon_home"
+          android:title="@string/label_page_summary" />
+    <item android:id="@+menu/photos"
+          android:icon="@drawable/menu_icon_photo"
+          android:title="@string/label_page_photo" />
+    <item android:id="@+menu/maps"
+          android:icon="@drawable/menu_icon_map"
+          android:title="@string/label_page_map" />
+    <item android:id="@+menu/comment"
+          android:icon="@drawable/menu_icon_comment"
+          android:title="@string/label_comment" />
+    <item android:id="@+menu/category"
+          android:icon="@drawable/menu_icon_category"
+          android:title="@string/label_categories" />
+    <item android:id="@+menu/sort"
+          android:icon="@drawable/menu_icon_sort"
+          android:title="@string/label_sort" />
+</menu>

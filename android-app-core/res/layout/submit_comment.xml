@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+        <LinearLayout
+          style="@style/EntryDetailTopBar"
+	  android:paddingLeft="5dp"
+          android:orientation="horizontal"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content">
+          
+            <Button 
+               android:text="Cancel"
+               android:background="@drawable/black_button"
+               style="@style/ButtonText"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:onClick="onCancelClicked"/> 
+
+            <TextView
+                style="@style/EntryDetailTitle"
+	        android:textSize="14dip"
+                android:text="Share your thoughts"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content">
+            </TextView>                        
+
+            <Button 
+               android:text="Send"
+               android:background="@drawable/black_button"
+               style="@style/ButtonText"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:onClick="onSubmitClicked"/> 
+        </LinearLayout>
+
+	<EditText
+	   android:id="@+comment/text"
+	   android:imeOptions="actionNext"
+	   android:layout_weight="2"
+	   android:lines="4"
+	   android:textSize="14dip"
+	   android:hint="Your comments, questions, or suggestions here..."
+	   android:paddingLeft="5dp"
+	   android:paddingBottom="10dp"
+	   android:layout_height="wrap_content"
+	   android:layout_width="fill_parent">
+	</EditText>
+
+	<EditText
+	   android:id="@+comment/alias"
+	   android:imeOptions="actionNext"
+	   android:hint="Name or alias (optional)"
+	   android:singleLine="true"
+	   android:textSize="14dip"
+	   android:paddingBottom="5dp"
+	   android:paddingLeft="5dp"
+	   android:layout_height="wrap_content"
+	   android:layout_width="fill_parent">
+	</EditText>
+
+	<EditText
+	   android:id="@+comment/email"
+	   android:imeOptions="actionDone"
+	   android:hint="Email address (optional and not posted)"
+	   android:singleLine="true"
+	   android:textSize="14dip"
+	   android:paddingBottom="5dp"
+	   android:paddingLeft="5dp"
+	   android:layout_height="wrap_content"
+	   android:layout_width="fill_parent">
+	</EditText>
+
+        <TextView
+	   android:id="@+comment/label_love_thoughts"
+           android:paddingBottom="4dp"
+	   android:textSize="18dip"
+	   android:textColor="#f04f38"
+           android:text="We'd love to hear YOUR thoughts"
+	   android:paddingLeft="5dp"
+           android:layout_height="wrap_content"
+           android:layout_width="fill_parent">
+        </TextView>                        
+
+        <TextView
+           android:paddingBottom="4dp"
+	   android:paddingLeft="5dp"
+	   android:textSize="15dip"
+           android:text="- Ask the author a question"
+           android:layout_height="wrap_content"
+           android:layout_width="fill_parent">
+        </TextView>                        
+
+        <TextView
+           android:paddingBottom="4dp"
+	   android:paddingLeft="5dp"
+	   android:textSize="15dip"
+           android:text="- Help us correct any errors"
+           android:layout_height="wrap_content"
+           android:layout_width="fill_parent">
+        </TextView>                        
+
+        <TextView
+           android:paddingBottom="4dp"
+	   android:paddingLeft="5dp"
+	   android:textSize="15dip"
+           android:text="- Suggest additional information that would be helpful"
+           android:layout_height="wrap_content"
+           android:layout_width="fill_parent">
+        </TextView>                        
+
+        <TextView
+           android:paddingBottom="4dp"
+	   android:paddingLeft="5dp"
+	   android:textSize="15dip"
+	   android:layout_weight="3"
+           android:text="- Suggest a place that you think should be added"
+           android:layout_height="wrap_content"
+           android:layout_width="fill_parent">
+        </TextView>                        
+
+        <TextView
+           android:paddingBottom="4dp"
+           android:gravity="center_horizontal|center_vertical"
+	   android:textSize="15dip"
+	   android:textColor="#666666"
+           android:text="All comments are reviewed prior to posting"
+           android:layout_height="wrap_content"
+           android:layout_width="fill_parent">
+        </TextView>                        
+</LinearLayout>

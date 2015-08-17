@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+detail/root_scrollview"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    
+    <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content">
+
+        <LinearLayout
+          style="@style/EntryDetailTopBar"
+          android:orientation="horizontal"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content">
+          
+            <ImageView
+                android:id="@+detail/goto_top"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10px"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10px"
+                android:paddingRight="10dp"
+                android:src="@drawable/goto_top" />
+
+            <TextView
+                android:id="@+detail/title"
+                style="@style/EntryDetailTitle"
+                android:text=""
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content">
+            </TextView>
+            
+            <ImageView
+                android:id="@+detail/favorite"
+                android:paddingRight="20px"
+                android:layout_gravity="center_vertical"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:src="@drawable/heart_off" />
+            
+        </LinearLayout>
+
+        <LinearLayout
+          android:orientation="horizontal"
+	  android:gravity="center"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+detail/main_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside">
+            </ImageView>
+                 
+            <com.google.android.maps.MapView
+                android:id="@+detail/map"
+ 	        android:layout_weight="1"
+	        android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:clickable="true"
+	        android:apiKey="@string/api_map_key"
+            />
+            <TextView
+                android:id="@+detail/no_map"
+                style="@style/EntryDetailNoMap"
+                android:text="@string/error_detail_no_connection"
+                android:visibility="gone"
+	        android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+	        android:layout_width="0dp"
+                android:layout_height="fill_parent">
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+          android:orientation="horizontal"
+          style="@style/EntryDetailDistancePriceBar"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content">
+            <TextView
+                android:id="@+detail/price"
+                style="@style/EntryDetailDistancePriceText"
+                android:text=""
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+                 
+            <TextView
+                android:id="@+detail/distance"
+                style="@style/EntryDetailDistancePriceText"
+                android:text=""
+                android:layout_weight="3"
+                android:gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+                  
+
+        <WebView android:id="@+id/web_engine"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                />
+    </LinearLayout>
+</ScrollView>

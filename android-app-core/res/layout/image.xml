@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+    <com.sutromedia.android.lib.widget.ImageViewSwitcher
+        android:id="@+image/switcher"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+    />
+
+
+    <ImageView
+        android:id="@+image/play_slideshow"
+        android:onClick="onStartSlideShow"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="40dp"
+        android:paddingBottom="30dp"
+        android:src="@drawable/play_slideshow" />
+
+
+    <LinearLayout
+        android:id="@+image/loading"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">        
+            <TextView
+                android:id="@+image/missing"
+                android:text="Loading missing image.\nPlease wait..."
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+	        android:paddingBottom="10dp"/>
+
+	    <ProgressBar android:id="@+image/wait"
+	        android:layout_centerInParent="true"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:indeterminate="true"
+		android:indeterminateOnly="true"
+		android:isScrollContainer="true" />
+    </LinearLayout>
+</RelativeLayout>

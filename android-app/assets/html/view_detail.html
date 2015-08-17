@@ -1,0 +1,277 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+    <head>
+        <title>Sutro Media</title>
+        <meta name="viewport" content="width=device-width; initial-scale = 1.0; maximum-scale=1.0; user-scalable=no" />
+        <style type="text/css">
+
+            a:link {
+                text-decoration: none;
+                -webkit-tap-highlight-color:rgba(0,0,0,0);
+            }
+
+            .ext {
+                text-decoration: none;
+                font-weight:400;
+                color:$cssLinkColor$;
+            }
+
+            .ellipsis {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                -o-text-overflow: ellipsis;
+            }
+
+            .SMEntryLink {
+	        text-decoration: none;
+                font-weight:700;
+                color:$externalWebsiteColor$;
+            }
+
+            .SMTag {
+	        text-decoration: none;
+                font-weight:700;
+                color:$cssLinkColor$;
+            }
+
+            .SMComment {
+                text-align:right;
+	            text-decoration: none;
+                font-weight:700;
+                color:$cssLinkColor$;
+            }
+
+            .SMWeb {
+	            text-decoration: none;
+	            text-overflow: ellipsis;
+                -o-text-overflow: ellipsis;
+                white-space: nowrap;
+	            overflow: hidden;
+                font-weight:700;
+                color:$cssLinkColor$;
+            }
+
+
+            .AddressTag {
+	            text-decoration: none;
+                font-weight:700;
+                color:$cssLinkColor$;
+                margin-bottom:5px;
+            }
+
+            .PhoneTag {
+	            text-decoration: none;
+                font-weight:700;
+                color:#0B610B;
+            }
+
+            .subtitle {
+                font-weight:700;
+                color:#222222;
+                text-align:center;
+                font-size:17px;
+                padding:15px 5px 15px 5px;
+            }
+
+            .tags {
+                text-align:left;
+                font-weight:700;
+                border-top:10px;
+                padding-top:20px;
+            }
+
+            .icon_table {
+                vertical-align:top;
+	            width:42px;
+                padding-right:0px;
+            }
+
+            .icon_comment {
+                vertical-align:center;
+	            width:42px;
+                padding-right:0px;
+            }
+
+            .detail_extra_row {
+                bottom-margin:3px;
+            }
+
+            body {
+                padding:0;
+                font-family:'Arial';
+                font-size:$bodyTextFontSize$px;
+                margin-bottom:0;
+                padding:0;
+                margin:0 $rightMargin$px 0px $leftMargin$px;
+                border:0;
+                color:$cssTextColor$;
+            }
+
+            table {
+                table-layout:fixed;
+                font-size:$bodyTextFontSize$px;
+                border-width: 0px;
+                border-spacing: 0px;
+                border-style:0;
+                border-collapse: collapse;
+                margin:0px 0px 10px 0px;
+                padding: 1px;
+                width:100%;
+            }
+
+
+            th, td {
+                overflow:hidden;
+                border-width: 0px;
+                border-spacing: 0px;
+                border-style: none;
+                border-collapse: collapse;
+                padding: 1px;
+            }
+
+            .divider {
+                width:100%;
+                height:1px;
+                background:url(file:///android_asset/html/divider.png);
+                background-size:100% 1px;
+                background-repeat:no-repeat;
+                background-position:center; 
+                margin-top:5px;
+                margin-bottom:8px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class='subtitle'>
+            $entry.subtitle$
+        </div>
+        <div id='pageContent'>
+            $entry.description$
+        </div>
+
+        <p class="tags">
+        $trunc(groups) : {
+            g |
+                <a class='SMTag' href='SMTag:$g.id$'>$g.name$, </a>
+            }; separator="\n"
+        $
+
+        $last(groups) : {
+            g |
+                <a class='SMTag' href='SMTag:$g.id$'>$g.name$</a>
+            }; separator="\n"
+        $
+        </p>
+
+        $if(use_comments)$
+        <div class="divider" >&nbsp;</div>
+        <table>
+          <tr class="detail_extra_row" style="padding-top:15px">
+            <td class="icon_comment">
+              <img src="file:///android_asset/comment.png" />
+            </td>
+            <td>
+	          $if(many_comments)$
+                <a class='SMComment' href='SMComment:$entry.id$'>View all comments ($comments$)</a>
+              $elseif(single_comment)$
+                <a class='SMComment' href='SMComment:$entry.id$'>View full comment</a>
+	          $else$
+                <a class='SMComment' href='SMCommentSubmit:$entry.id$'>Add your comment or question!</a>
+              $endif$
+            </td>
+          </tr>
+	      $if(many_comments)$
+          <tr>
+            <td colspan="2">
+              <div class='ellipsis'>$first_comment.comment.message$</div>
+            </td>
+          </tr>
+          $elseif(single_comment)$
+          <tr>
+            <td colspan="2">
+              <div class='ellipsis'>$first_comment.comment.message$</div>
+            </td>
+          </tr>
+          $endif$
+        </table>
+        <div class="divider" style="margin-bottom: 10px" >&nbsp;</div>
+        $endif$
+
+        <table>
+        $if(entry.hours)$
+        <tr class="detail_extra_row">
+            <td class="icon_table"><img src="file:///android_asset/hours.png" /></td>
+            <td>$entry.hours$</td>
+        </tr>
+        $endif$
+
+        $if(entry.priceDetails)$
+        <tr class="detail_extra_row">
+            <td class="icon_table"><img src="file:///android_asset/pricedetails.png" /></td>
+            <td>$entry.priceDetails$</td>
+        </tr>
+        $endif$
+
+        $if(entry.webUrl)$
+        <tr class="detail_extra_row">
+            <td class="icon_table"><img src="file:///android_asset/webTile.png" /></td>
+            <td><a class='SMWeb' href='$entry.webUrl$'>$entry.webUrl$</a></td>
+        </tr>
+        $endif$
+
+        $if(entry.phoneFormatted)$
+        <tr class="detail_extra_row">
+            <td class="icon_table"><img src="file:///android_asset/callTile.png" /></td>
+            <td><a class='PhoneTag' href='tel:$entry.phoneRaw$'>$entry.phoneFormatted$</a></td>
+        </tr>
+        $endif$
+
+        $if(entry.address)$
+        <tr class="detail_extra_row">
+            <td class="icon_table"><img src="file:///android_asset/address.png" /></td>
+            <td><a class='AddressTag' href='map:$entry.id$'>$entry.address$</a></td>
+        </tr>
+        $endif$
+
+        $if(entry.facebookAccount)$
+        <tr class="detail_extra_row">
+            <td class="icon_table"><img src="file:///android_asset/facebookTile.png" /></td>
+            <td><a class='SMWeb' href='http://facebook.com/$entry.id$'>$entry.facebookAccount$</a></td>
+        </tr>
+	$endif$
+
+        $if(entry.facebookUrl)$
+        <tr class="detail_extra_row">
+            <td class="icon_table"><img src="file:///android_asset/facebookTile.png" /></td>
+            <td><a class='SMWeb' href='$entry.facebookUrl$'>$entry.facebookUrl$</a></td>
+        </tr>
+	$endif$
+
+
+        $if(entry.reservationUrl)$
+        <tr class="detail_extra_row">
+            <td class="icon_table"><img src="file:///android_asset/reservationTile.png" /></td>
+            <td><a class='SMWeb' href='$entry.reservationUrl$'>$entry.reservationUrl$</a></td>
+        </tr>
+	$endif$
+
+        $if(entry.twitterAccount)$
+        <tr class="detail_extra_row">
+            <td class="icon_table"><img src="file:///android_asset/twitterTile.png" /></td>
+            <td><a class='SMWeb' href='https://twitter.com/$entry.twitterAccount$'>@$entry.twitterAccount$</a></td>
+        </tr>
+	$endif$
+
+        $if(entry.videoUrl)$
+        <tr class="detail_extra_row">
+            <td class="icon_table"><img src="file:///android_asset/videoTile.png" /></td>
+            <td><a class='SMWeb' href='$entry.videoUrl$'>$entry.videoUrl$</a></td>
+        </tr>
+	$endif$
+
+        </table>
+	<br/>
+    </body>
+</html>

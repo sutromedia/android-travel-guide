@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+
+   <PreferenceCategory android:title="Diagnostic">
+        <CheckBoxPreference
+           android:key="DIAGNOSTIC_REPORT"
+           android:title="Log Detailed Data"
+           android:defaultValue="true"
+           android:summary="Allow the application to log extra information to help us diagnose problems. Your personal information will NOT be logged." />
+   
+	<CheckBoxPreference
+           android:key="DIAGNOSTIC_DEBUG"
+           android:title="Log Debug Data"
+           android:defaultValue="false"
+           android:summary="Allow the application to log debug information to help us diagnose problems. Your personal information will NOT be logged."  />
+	<CheckBoxPreference
+           android:key="DIAGNOSTIC_SEND_NOW"
+           android:title="Send Report Now"
+           android:defaultValue="false"
+           android:summary="The application is not behaving properly. Send us debugging report now."  />
+   </PreferenceCategory>
+
+</PreferenceScreen>

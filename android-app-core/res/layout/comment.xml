@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      android:orientation="vertical"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent">
+      
+      <LinearLayout
+         style="@style/EntryDetailTopBar"
+         android:orientation="vertical"
+         android:gravity="right"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content">
+        
+        <Button
+           android:id="@+comment/caption"
+           style="@style/ButtonText"
+           android:background="@drawable/black_button"
+           android:textSize="15dip"
+           android:text="Comment or Ask Question"
+           android:layout_gravity="right"
+           android:layout_height="wrap_content"
+           android:layout_width="wrap_content"
+           android:onClick="onSubmitComment" />
+      </LinearLayout>
+      <WebView
+	 android:id="@+comment/web_engine"
+	 android:layout_width="fill_parent"
+	 android:layout_height="fill_parent"
+         android:layout_weight="1.0" />
+</LinearLayout>

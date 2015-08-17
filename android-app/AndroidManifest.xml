@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<manifest android:installLocation="auto" android:versionCode="13" android:versionName="1.01.13" package="com.sutromedia.android.guide.san.francisco.test" xmlns:android="http://schemas.android.com/apk/res/android">
+  <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="8"></uses-sdk>
+  <application android:icon="@drawable/app_icon" android:label="@string/app_name" android:name="com.sutromedia.android.core.MainApp">
+    <activity android:configChanges="orientation" android:label="@string/app_name" android:launchMode="singleTask" android:name="com.sutromedia.android.core.SplashActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"></action>
+        <category android:name="android.intent.category.LAUNCHER"></category>
+      </intent-filter>
+    </activity>
+    <activity android:launchMode="singleTask" android:name="com.sutromedia.android.core.MainListActivity" android:theme="@style/WhiteBackground"></activity>
+    <activity android:launchMode="singleTask" android:name="com.sutromedia.android.core.FullMapActivity" android:process=":FullMap" android:theme="@style/WhiteBackground"></activity>
+    <activity android:configChanges="orientation" android:launchMode="singleTask" android:name="com.sutromedia.android.core.PhotoActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"></activity>
+    <activity android:launchMode="singleTask" android:name="com.sutromedia.android.core.WebEntryActivity" android:theme="@style/WhiteBackground"></activity>
+    <activity android:launchMode="singleTask" android:name="com.sutromedia.android.core.WebActivity" android:theme="@style/WhiteBackground"></activity>
+    <activity android:launchMode="singleTask" android:name="com.sutromedia.android.core.CommentActivity" android:theme="@style/WhiteBackground"></activity>
+    <activity android:name="com.sutromedia.android.core.CategoryListActivity" android:theme="@style/NoTitleDialogTheme"></activity>
+    <activity android:name="com.sutromedia.android.core.SortSettingActivity" android:theme="@style/NoTitleDialogTheme"></activity>
+    <activity android:name="com.sutromedia.android.core.GuidePreference" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"></activity>
+    <activity android:name="com.sutromedia.android.core.SubmitCommentActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"></activity>
+    <uses-library android:name="com.google.android.maps"></uses-library>
+  </application>
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+  <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+  <supports-screens android:largeScreens="true"></supports-screens>
+  <uses-feature android:name="android.hardware.telephony" android:required="false"></uses-feature>
+  <uses-feature android:name="android.hardware.location" android:required="false"></uses-feature>
+  <uses-feature android:name="android.hardware.location.network" android:required="false"></uses-feature>
+  <uses-feature android:name="android.hardware.location.gps" android:required="false"></uses-feature>
+  <uses-feature android:name="android.hardware.wifi" android:required="false"></uses-feature>
+</manifest>
+

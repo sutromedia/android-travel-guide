@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white_theme_color">#ffffff</color>
+    <color name="comment_theme_color">#0a0a0a</color>
+
+    <style name="NoTitleDialogTheme" parent="android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="WhiteBackground" parent="android:style/Theme.NoTitleBar.Fullscreen">
+      <item name="android:windowBackground">@color/white_theme_color</item>
+      <item name="android:colorBackground">@color/white_theme_color</item>
+    </style>
+
+    <style name="CommentBackground" parent="android:style/Theme.NoTitleBar.Fullscreen">
+      <item name="android:windowBackground">@color/comment_theme_color</item>
+      <item name="android:colorBackground">@color/comment_theme_color</item>
+    </style>
+    
+    <style name="MainList">
+        <item name="android:background">#FFFFFFFF</item>
+        <item name="android:divider">@drawable/listview_separator</item>
+        <item name="android:dividerHeight">1px</item>
+    </style>
+
+    <style name="ApplicationDefaultTextColor">
+        <item name="android:textColor">#424242</item>
+    </style>
+
+    <style name="ApplicationLinkColor">
+        <item name="android:textColor">#3678BF</item>
+    </style>
+
+    <style name="MainListEntryName" parent="ApplicationDefaultTextColor">
+        <item name="android:lines">1</item>
+        <item name="android:scrollHorizontally">false</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">17dip</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <style name="MainListSmall">
+        <item name="android:textSize">11dip</item>
+    </style>
+    
+    <style name="MainListSmall.Price">
+        <item name="android:textColor">#606060</item>
+    </style>
+
+    <style name="MainListSmall.Group">
+        <item name="android:textColor">#606060</item>
+    </style>
+
+    <style name="MainListSmall.Distance">
+        <item name="android:textColor">#3678BF</item>
+    </style>
+
+    <style name="EntryDetailTopBar">
+        <item name="android:background">#101010</item>
+    </style>
+
+    <style name="EntryDetailTitle">
+        <item name="android:textColor">#a0a0a0</item>
+        <item name="android:lines">1</item>
+        <item name="android:scrollHorizontally">false</item>
+        <item name="android:textSize">16dip</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CommentTitle">
+        <item name="android:textColor">#a0a0a0</item>
+        <item name="android:lines">1</item>
+        <item name="android:scrollHorizontally">false</item>
+        <item name="android:textSize">16dip</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+    <style name="EntryDetailNoMap">
+        <item name="android:textSize">13dip</item>
+        <item name="android:textColor">#424242</item>
+        <item name="android:background">#ffffff</item>
+    </style>
+
+    
+    <style name="EntryDetailDistancePriceBar">
+        <item name="android:background">#808080</item>
+    </style>
+    
+    <style name="EntryDetailDistancePriceText">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">15dip</item>
+    </style>    
+    
+    <style name="PhotoLabel" parent="ApplicationLinkColor">
+        <item name="android:textSize">14dip</item>
+        <item name="android:textStyle">bold</item>
+	<item name="android:lines">1</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>          
+        <item name="android:shadowRadius">0.1</item>
+        <item name="android:paddingLeft">20dip</item>
+        <item name="android:paddingRight">20dip</item>
+    </style>    
+
+    <style name="PhotoCreditLabel">
+        <item name="android:textSize">13dip</item>
+        <item name="android:paddingLeft">5dip</item>
+        <item name="android:paddingRight">5dip</item>
+        <item name="android:paddingTop">0dip</item>
+        <item name="android:paddingBottom">0dip</item>
+    </style>    
+    
+    <style name="PopupEntryName" parent="ApplicationLinkColor">
+        <item name="android:textSize">17dip</item>
+        <item name="android:textStyle">bold</item>
+    </style>    
+    
+    <style name="PopupAddress">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">11dip</item>
+    </style>    
+
+    <style name="PopupTagLine" parent="PopupAddress">
+        <item name="android:textStyle">italic</item>
+    </style>    
+    
+    <style name="PopupDirectionsLink" parent="ApplicationLinkColor">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">13dip</item>
+    </style>    
+
+    <style name="PopupDistance" parent="PopupAddress">
+        <item name="android:textSize">10dip</item>
+    </style>    
+    
+    <style name="PopupFare" parent="PopupAddress">
+        <item name="android:textSize">10dip</item>
+    </style>    
+
+    <style name="ButtonText">
+      <item name="android:layout_width">fill_parent</item>
+      <item name="android:layout_height">wrap_content</item>
+      <item name="android:textColor">#ffffff</item>
+      <item name="android:gravity">center</item>
+      <item name="android:layout_margin">2dp</item>
+      <item name="android:textSize">12dip</item>
+      <item name="android:textStyle">bold</item>
+      <item name="android:shadowColor">#000000</item>
+      <item name="android:shadowDx">1</item>
+      <item name="android:shadowDy">1</item>
+      <item name="android:shadowRadius">2</item>
+    </style>
+
+    
+</resources>

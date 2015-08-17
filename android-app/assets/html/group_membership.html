@@ -1,0 +1,12 @@
+$trunc(groups) : {
+    g | 
+        <a class='SMTag' href='SMTag:$g.id$'>$g.name$,</a> 
+    }; separator="\n"
+$
+
+$last(groups) : {
+    g | 
+        <a class='SMTag' href='SMTag:$g.id$'>$g.name$ $i$</a> 
+    }; separator="\n"
+$
+

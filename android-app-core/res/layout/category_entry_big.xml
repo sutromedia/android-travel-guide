@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation = "horizontal"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <ImageView
+    	android:id="@+category/selection_icon"
+    	android:layout_width="30dip"
+    	android:layout_height="30dip"
+    	android:src="@drawable/icon_checked"
+        android:scaleType="centerCrop">
+    </ImageView>
+        
+    <TextView
+    	android:id="@+category/name"
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+    	android:textAppearance="?android:attr/textAppearanceLarge"
+    	android:text="Should not appear"
+        android:layout_weight="1" 
+        android:paddingLeft="10dip">
+    </TextView>
+</LinearLayout>

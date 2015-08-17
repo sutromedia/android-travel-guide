@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+popup/root"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+    android:orientation = "vertical"
+    android:background="@drawable/map_popup_small" >
+
+    <LinearLayout
+        android:id="@+popup/entry_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation = "vertical">    
+        <TextView
+            android:id="@+popup/name"
+            android:text=""
+            style="@style/PopupEntryName"
+            android:gravity="left"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_toRightOf="@+entry/logo">
+        </TextView>
+        
+        <TextView
+            android:id="@+popup/subtitle"
+            android:text=""
+            style="@style/PopupTagLine"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent" />
+        
+        <TextView
+            android:id="@+popup/address"
+            android:text=""
+            style="@style/PopupAddress"
+            android:gravity="left"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent" />
+    </LinearLayout>
+    
+    <RelativeLayout
+        android:id="@+popup/direction_group"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dip">    
+        <TextView
+            android:id="@+popup/directions"
+            android:text="Get Directions"
+            style="@style/PopupDirectionsLink"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" />
+
+        <TextView
+            android:id="@+popup/distance"
+            android:text=""
+            style="@style/PopupDistance"
+            android:layout_below="@popup/directions"
+            android:layout_alignParentLeft="true"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" />
+
+        <TextView
+            android:id="@+popup/taxi"
+            android:text="Call Taxi"
+            style="@style/PopupDirectionsLink"
+            android:paddingLeft="10dip"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" />
+
+        <TextView
+            android:id="@+popup/fare"
+            android:text=""
+            style="@style/PopupFare"
+            android:layout_below="@popup/taxi"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" />
+
+            
+    </RelativeLayout>
+        
+</LinearLayout>

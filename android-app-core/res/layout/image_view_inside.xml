@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+    <com.sutromedia.android.lib.widget.AutoFitImageView
+        android:id="@+image/photo"
+        android:layout_centerInParent="true"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+        
+    <RelativeLayout
+        android:id="@+image/licenseGroup"
+        android:orientation="horizontal"
+        android:paddingLeft="5dip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@image/photo"
+        android:layout_alignLeft="@image/photo"
+        android:background="@drawable/attrib_inside">
+        <ImageView
+            android:id="@+image/license1"
+            android:layout_width="15dip"
+            android:layout_height="14dip"
+            android:layout_marginLeft="5dip"
+            android:src="@drawable/attribution"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY" />
+        <ImageView
+            android:id="@+image/license2"
+            android:layout_width="15dip"
+            android:layout_height="14dip"
+            android:layout_marginLeft="5dip"
+            android:src="@drawable/copyright"
+            android:layout_toRightOf="@image/license1"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY" />
+            
+        <TextView
+            android:id="@+image/owner"
+            android:text=""
+            style="@style/PhotoCreditLabel"
+            android:layout_toRightOf="@image/license2"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+image/captionGroup"
+        android:orientation="horizontal"
+        android:paddingTop="20dip"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignWithParentIfMissing="true">
+        
+            <TextView
+                android:id="@+image/caption"
+                android:text=""
+                style="@style/PhotoLabel"
+                android:background="@drawable/rounded"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" />
+    </LinearLayout>
+   
+</RelativeLayout>

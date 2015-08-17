@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<project default="help" name="sf-explorer">
+  <loadproperties srcFile="local.properties"></loadproperties>
+  <property file="ant.properties"></property>
+  <loadproperties srcFile="project.properties"></loadproperties>
+  <fail message="sdk.dir is missing. Make sure to generate local.properties using 'android update project'" unless="sdk.dir"></fail>
+  <import file="${sdk.dir}/tools/ant/build.xml"></import>
+  <target name="deep-clean">
+    <delete>
+      <fileset dir="../android-app-core/bin" includes="**/*"></fileset>
+      <fileset dir="../android-app-core/gen" includes="**/*"></fileset>
+    </delete>
+  </target>
+</project>
+

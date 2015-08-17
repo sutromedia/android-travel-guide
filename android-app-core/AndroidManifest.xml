@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.sutromedia.android.core"
+      android:versionCode="1"
+      android:versionName="1.0"
+      android:installLocation="preferExternal">
+
+    <application 
+        android:name="com.sutromedia.android.core.MainApp"
+        android:label="@string/app_name" 
+        android:icon="@drawable/app_icon">
+
+        <activity android:name="com.sutromedia.android.core.SplashActivity"
+                  android:label="@string/app_name"
+                  android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.sutromedia.android.core.MainListActivity"
+                  android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity 
+            android:name="com.sutromedia.android.core.FullMapActivity" 
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:process=":FullMap"/>
+        <activity 
+            android:name="com.sutromedia.android.core.PhotoActivity" 
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+	    android:configChanges="orientation" />
+
+        <activity 
+            android:name="com.sutromedia.android.core.WebEntryActivity" 
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity 
+            android:name="com.sutromedia.android.core.WebActivity" 
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+	<activity 
+	   android:name="com.sutromedia.android.core.CommentActivity" 
+	   android:theme="@style/WhiteBackground"/>
+
+        <activity 
+            android:name="com.sutromedia.android.core.CategoryListActivity" 
+            android:theme="@style/NoTitleDialogTheme" />
+        <activity 
+            android:name="com.sutromedia.android.core.SortSettingActivity" 
+            android:theme="@style/NoTitleDialogTheme"/>
+
+	<activity 
+	   android:name="com.sutromedia.android.core.SubmitCommentActivity" 
+	   android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+
+	<activity 
+	   android:name="com.sutromedia.android.core.GuidePreference" 
+	   android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+            
+        <uses-library android:name="com.google.android.maps" />
+    </application>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <supports-screens android:largeScreens="true"/>
+    
+</manifest> 

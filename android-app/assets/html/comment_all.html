@@ -1,0 +1,110 @@
+<html>
+  <head>
+    <title>Sutro Media</title>
+    <style type="text/css"> 
+
+
+* { margin: 0; padding: 0; outline: 0; }
+
+body {
+    font-size: 13px;
+    line-height: 17px;
+    font-family: arial, sans-serif;
+    color: #424242;
+    background: #aaa;
+    padding: 15px 0; 
+    overflow:hidden;
+}
+
+a {
+  color: #3678bf; 
+  text-decoration: none; 
+}
+
+A:link {
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+  text-decoration:none; color:#3678bf;
+}
+
+a img { border: 0; }
+
+input, textarea, select { font-size: 12px; font-family: arial, sans-serif; }
+textarea { overflow: auto; }
+
+.cl { display: block; height: 0; font-size: 0; line-height: 0; text-indent: -4000px; clear: both; }
+.notext { font-size: 0; line-height: 0; text-indent: -4000px; }
+.left, .alignleft { float: left; display: inline; }
+.right, .alignright { float: right; display: inline; }
+
+h3 { font-size: 15px; }
+
+.comm-list {  }
+.comm-list ul { list-style: none; list-style-position: outside; }
+.comm-list ul li { padding-bottom: 20px; }
+
+.comment { background: #f8f8f9 url(file:///android_asset/html/comment_bar.png) repeat-x 0 bottom; margin: 0 10px 5px 10px; border-radius: 13px; -moz-border-radius: 13px; -webkit-border-radius: 13px; -o-border-radius: 13px; box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.8); -moz-box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.8); -webkit-box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.8); -o-box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.8); position:relative; padding: 8px; padding-right: 10px; overflow:hidden;}
+
+.comment span.tail { height: 15px; width: 18px; background: url(file:///android_asset/html/tail.png) no-repeat 0 0; position:absolute; bottom: -10px; left: -3px; }
+
+.c-header { padding-bottom: 7px; position:relative; min-height: 23px; padding-left: 35px; padding-top: 7px; }
+
+.c-header img { position:absolute; top: 0; left: 0; }
+
+.c-body { padding-bottom: 4px; }
+
+.c-footer { color: #4d4d4d; font-style: italic; overflow: hidden; }
+
+.ans-comm { background: #cce0f0 url(file:///android_asset/html/comment-blue.png) repeat-x 0 bottom;  box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.8), inset 0 1px 4px #fff; -moz-box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.8), inset 1px 1px 4px #fff; -webkit-box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.8), inset 1px 1px 4px #fff; -o-box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.8), inset 1px 1px 4px #fff; margin-left: 30px; color: #4a4b4d; font-size: 13px; overflow:hidden;}
+.ans-comm span.tail { height: 18px; width: 17px; bottom: -6px; left: auto; right: -4px; background: url(file:///android_asset/html/blue-tail.png) no-repeat 0 0; }
+
+    </style>
+  </head>
+
+  <body>
+    <div class='comm-list'>
+      <ul>
+        $comments : {item | 
+        <li>
+          <div class='comment'>
+            <span class='tail'>&nbsp;</span>
+	        $if(showEntryName)$
+                $if(item.entryName)$
+                <div class='c-header'>
+                  <img src= 'file:///android_asset/images/$item.entryIcon$_x100.jpg' alt='' height='30' width='30' />
+                  <h3><a href='SMEntryLink://$item.entryId$'>$item.entryName$</a></h3>
+                </div>
+                $endif$
+	        $endif$
+            <div class='c-body'>
+              <p>$item.comment.message$</p>
+            </div>
+            <div class='c-footer'>
+              $if(item.comment.author)$
+              <p class='left'>from $item.comment.author$</p>
+	          $else$
+              <p class='left'>posted by Anonymous</p>
+	          $endif$
+              <p class='right'>$item.comment.date$</p>
+            </div>
+          </div>
+
+          $if(item.hasAnswer)$
+          <div class='comment ans-comm'>
+            <span class='tail'>&nbsp;</span>
+            <div class='c-body'>
+              <p>$item.answer.message$</p>
+            </div>
+            <div class='c-footer'>
+              <p class='left'>$item.answer.date$</p>
+              <p class='right'>$item.answer.author$</p>
+            </div>
+          </div>
+          $endif$
+
+        </li>
+        }; separator="\n"
+        $
+      </ul>
+    </div>
+  </body>
+</html> 

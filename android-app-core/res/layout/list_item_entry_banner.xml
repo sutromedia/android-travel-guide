@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+   xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="fill_parent"
+   android:layout_height="fill_parent"
+   style="@style/MainList"
+   android:padding="0dip">
+
+    <ImageView
+    	android:id="@+entry/logo"
+    	android:layout_width="match_parent"
+    	android:layout_height="200dip"
+    	android:src="@drawable/app_icon"
+    	android:layout_alignParentLeft="true"
+    	android:layout_centerInParent="true"
+        android:scaleType="fitXY">
+    </ImageView>
+
+    <LinearLayout
+        android:id="@+entry/banner_group"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+    	android:layout_alignParentLeft="true"
+    	android:layout_alignParentTop="true"
+        android:background="@drawable/attrib_outside">
+
+      <TextView
+    	 android:id="@+entry/title"
+         style="@style/MainListEntryName"
+    	 android:text=""
+	 android:textColor="@android:color/black"
+	 android:textStyle="bold"
+	 android:textSize="25dip"
+	 android:padding="10dip"
+    	 android:layout_marginTop="1px"
+    	 android:layout_marginLeft="10dip"
+         android:layout_weight="1"
+    	 android:layout_height="wrap_content"
+    	 android:layout_width="wrap_content"
+    	 android:layout_alignParentLeft="true">
+      </TextView>
+    </LinearLayout>
+</RelativeLayout>

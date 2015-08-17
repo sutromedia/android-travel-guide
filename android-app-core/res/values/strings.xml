@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="api_map_key_debug">0NBtO6NTfKUHnnjCUNvQeAF7cjWP-91_ET3c-WQ</string>
+    <string name="api_map_key">0KLrb9lvRh_WhC9GwLc560_OuEMkvptbirFZBLg</string>
+    <string name="app_name">New York Essential Guide</string>
+    <string name="label_page_map">Maps</string>
+    <string name="label_page_photo">Photos</string>
+    <string name="label_page_summary">Browse</string>
+    <string name="label_categories">Categories</string>
+    <string name="label_sort">Sorting</string>
+    <string name="label_comment">Comments</string>
+    <string name="label_settings">Settings</string>
+    <string name="distance_far_full">About %1$.0f %2$s from you</string>
+    <string name="distance_close_full">About %1$.1f %2$s from you</string>
+    <string name="distance_far_short">%1$.0f %2$s</string>
+    <string name="distance_close_short">%1$.1f %2$s</string>
+    <string name="price_main_list">%2$s%1$.0f</string>
+    <string name="price_per_adult">%2$s%1$.0f/adult</string>
+    <string name="price_free">Free!</string>
+    <string name="error_web_no_connection">
+        It looks like you don\'t have an internet connection.
+        You\'ll need one to view external web sites.
+    </string>
+    <string name="error_map_no_connection">
+        It looks like you don\'t have an internet connection.
+        You\'ll need one to view the map.
+    </string>
+    <string name="error_detail_no_connection">
+        No connectivity.\nMap unavalaible
+    </string>
+    <string name="error_no_telephony">
+        It looks like this device can not make phone calls.\n
+        Unable to call %1$s.
+    </string>
+
+    <string name="missing_photo">
+      Loading missing image [%1$s/%2$s].\nPlease wait...
+    </string>
+
+    <string name="missing_not_online">
+      It looks like you don\'t have\n
+      an internet connection.\n\n
+      Some of the pictures in this guide are not embedded in the application, but are instead downloaded from our servers, and saved on your device. Once downloaded, an internet connection is not necessary anymore.\n\n
+      You should enable an internet connection (turn off "Airplane Mode" or connect to a Wifi network) to download this image. \n\n
+      Unable to load photo [%1$s/%2$s].
+    </string>
+    
+    <string name="error_okay">Okay</string>
+</resources>
